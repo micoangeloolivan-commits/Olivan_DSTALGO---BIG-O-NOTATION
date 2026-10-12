@@ -1,0 +1,36 @@
+namespace Big_O__3
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnUse_Click(object sender, EventArgs e)
+        {
+            healthBar.Value = 0;
+            durationBar.Value = 0;
+
+            lblHealth.Text = "Health: 0%";
+            lblDuration.Text = "Processing: 0%";
+
+            for (int hp = 0; hp <= 100; hp += 20)
+            {
+                healthBar.Value = hp;
+                lblHealth.Text = "Health: " + hp + "%";
+
+                for (int t = 0; t <= 100; t += 20)
+                {
+                    durationBar.Value = t;
+                    lblDuration.Text = "Processing: " + t + "%";
+
+                    Application.DoEvents();
+                    System.Threading.Thread.Sleep(300);
+                }
+            }
+
+            MessageBox.Show("All Systems Restored");
+        }
+    }
+}

@@ -1,0 +1,36 @@
+namespace Big_O__2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+            string[] items = { "car", "supply", "model", "cash"};
+
+            foreach (string item in items)
+            {
+                if (item == "car")
+                {
+                    MessageBox.Show("Hot Wheels Diecast x20");
+                }
+                else if (item == "supply")
+                {
+                    MessageBox.Show("School Supplies x16");
+                }
+                else if (item == "model")
+                {
+                    MessageBox.Show("Gunpla Model Kits x5");
+                }
+                else if (item == "cash")
+                {
+                    MessageBox.Show("8 Million Pesos");
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,28 @@
+namespace Big_O
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            string chest = cmbChest.Text;
+
+            if (chest == "LEFT")
+            {
+                MessageBox.Show("OH NO!! A SPIDER JUMPS OUT AND BITES YOU");
+            }
+            else if (chest == "CENTER") 
+            {
+                MessageBox.Show("WOW!! YOU GOT A DIAMOND");
+            }
+            else if (chest == "RIGHT")
+            {
+                MessageBox.Show("you got nothing....");
+            }
+        }
+    }
+}
